@@ -1,0 +1,15 @@
+/*Site*/
+    * {
+        padding: 0 !important;
+        border: 0 !important;
+        margin: 0 !important;
+        text-decoration: none !important;
+        list-style: none !important;
+    }
+/*Site*/
+/*Vareaveis*/
+    :root {
+        --color-site: #070716;
+        --color-btn: linear-gradient(45deg, #3E1CF6, #241090);
+    }
+/*Vareaveis*/
