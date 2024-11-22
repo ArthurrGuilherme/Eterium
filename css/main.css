@@ -35,3 +35,8 @@ body {
     position: absolute;
     top: 800px; 
 }
+.card03 {
+    width: 389px;
+    height: 321px;
+    background: var(--color-degrad01);
+}
