@@ -306,10 +306,21 @@
 </body>
     <!--js-->
         <script>
-            function loading(){
-                document.getElementsByClassName("boxload")[0].style.display = "none";
-                document.getElementsByClassName("contentt")[0].style.display = "block";
-            }
+                document.addEventListener("DOMContentLoaded", function () {
+                function loading() {
+                    const boxLoad = document.querySelector(".boxload");
+                    const content = document.querySelector(".contentt");
+
+                    if (boxLoad && content) {
+                        boxLoad.style.display = "none";
+                        content.style.display = "block";
+                    } else {
+                        console.error("Elementos '.boxload' ou '.contentt' não encontrados!");
+                    }
+                }
+
+                loading();
+            });
         </script>
         <script src="./js/scroll.js"></script>
         <script src="./js/scrollrevel.js"></script>
