@@ -6,18 +6,18 @@ body {
     height: 222px;
     border-radius: 54px 0px 0px 0px;
     border-radius: 5px;
-    background:linear-gradient(90deg, #3E1CF6 0%, #241090 100%);
+    background: var(--color-degrad01);
 }
 #cards02 {
     height: 267px;
-    background: linear-gradient(121.76deg, #DA35D1 0%, #3718DF 162.54%);
+    background: var(--color-degrad02);
 }
 #cards03 {
     height: 315px;
 }
 #cards04 {
     height: 355px;
-    background: linear-gradient(121.76deg, #DA35D1 0%, #3718DF 162.54%);
+    background: var(--color-degrad02);
 }
 .card02 {
     width: 355px;

@@ -11,6 +11,8 @@
     :root {
         --color-site: #070716;
         --color-btn: linear-gradient(45deg, #3E1CF6, #241090);
+        --color-degrad01: linear-gradient(90deg, #3E1CF6 0%, #241090 100%);
+        --color-degrad02: linear-gradient(121.76deg, #DA35D1 0%, #3718DF 162.54%);
         --color-cards: #9797972E;
     }
 /*Vareaveis*/
