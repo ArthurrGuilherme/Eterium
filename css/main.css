@@ -19,3 +19,18 @@ body {
     height: 355px;
     background: linear-gradient(121.76deg, #DA35D1 0%, #3718DF 162.54%);
 }
+.card02 {
+    width: 355px;
+    height: 268px;
+    border-radius: 15px;
+    border: 1px solid #fff !important;
+    background: #9797972E!important;
+}
+#fixedDiv.fixed {
+    position: sticky; 
+    top: 10px;
+}
+#fixedDiv.stopped {
+    position: absolute;
+    top: 800px; 
+}
