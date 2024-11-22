@@ -33,4 +33,9 @@ ScrollReveal({ reset: true });
             duration: 1000, reset: true, distance: '100px' , origin: 'right',
         }
     );
+    ScrollReveal().reveal('#card04', 
+        {    
+            duration: 1000, reset: true, distance: '100px' , origin: 'right',
+        }
+    );
 /*Sessao cards */
