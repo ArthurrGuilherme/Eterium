@@ -1,6 +1,9 @@
 body {
     background: var(--color-site) !important;
 }
+header {
+    background: var(--color-site) !important;
+}
 .Card01 {
     width: 266px;
     height: 222px;
@@ -29,7 +32,7 @@ body {
 }
 #fixedDiv.fixed {
     position: sticky; 
-    top: 10px;
+    top: 8rem;
 }
 #fixedDiv.stopped {
     position: absolute;
