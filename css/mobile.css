@@ -3,21 +3,13 @@
         width: 220px;
     }
 }
-@media (max-width: 990px) {
-    .navbar-toggler {
-        display: none;
-    }
-    .Card01 {
-        width: 160px;
-        height: 222px !important;
-    }
-    .Card01 h4 {
-        font-size: 1rem !important;
-    }
-}
 @media (max-width: 412px)  {
     #header {
         padding-bottom: 0px !important;
+        text-align: center;
+    }
+    .navbar-toggler {
+        display: none !important;
     }
     #CardsP {
         flex-direction: column;
