@@ -34,4 +34,7 @@
     .gap {
         gap: 1rem;
     }
+    #CardsMobile02 {
+        background: var(--color-degrad02) !important;
+    }
 }
