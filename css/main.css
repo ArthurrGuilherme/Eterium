@@ -32,7 +32,7 @@ header {
 }
 #fixedDiv.fixed {
     position: sticky; 
-    top: 8rem;
+    top: 10px;
 }
 #fixedDiv.stopped {
     position: absolute;
