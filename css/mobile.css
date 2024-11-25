@@ -13,4 +13,7 @@
     #Desktop{
         display: none !important;
     }
+    .gap {
+        gap: 1rem;
+    }
 }
