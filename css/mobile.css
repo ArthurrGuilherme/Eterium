@@ -1,0 +1,25 @@
+@media (max-width: 1200px) {
+    .Card01 {
+        width: 220px;
+    }
+}
+@media (max-width: 990px) {
+    .navbar-toggler {
+        display: none;
+    }
+    .Card01 {
+        width: 160px;
+        height: 222px !important;
+    }
+    .Card01 h4 {
+        font-size: 1rem !important;
+    }
+}
+@media (max-width: 800px)  {
+    #CardsP {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem 0px !important;
+    }
+}
