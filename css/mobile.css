@@ -48,7 +48,7 @@
         background: var(--color-degrad02) !important;
     }
     .card02Mobile {
-        width: 355px;
+        width: 350px;
         height: 268px;
         border-radius: 15px;
         border: 1px solid #fff !important;
@@ -68,5 +68,13 @@
         opacity: 1; /* Apenas o slide ativo visível */
         position: relative; /* Ajuste a camada do item ativo */
       }
-      
+      .cards03Mobile {
+        width: 330px;
+        height: 270px;
+        background: var(--color-degrad01);
+    }
+    #cards04Mobile {
+        height: 355px;
+        background: var(--color-degrad02);
+    }
 }
