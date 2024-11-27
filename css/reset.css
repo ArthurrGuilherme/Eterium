@@ -8,6 +8,9 @@
     }
 /*Site*/
 /*Vareaveis*/
+    a {
+        cursor: pointer;
+    }
     :root {
         --color-site: #070716;
         --color-btn: linear-gradient(45deg, #3E1CF6, #241090);

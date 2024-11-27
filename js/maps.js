@@ -16,3 +16,10 @@ document.querySelector("#Servico").addEventListener("click", function (event) {
 
     console.log("go to up")
 })
+document.querySelector("#Depoimentos").addEventListener("click", function (event) {
+    event.preventDefault();
+
+    scrollto("#Clientes")
+
+    console.log("go to up")
+})

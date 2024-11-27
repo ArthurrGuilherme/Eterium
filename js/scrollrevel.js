@@ -39,3 +39,4 @@ ScrollReveal({ reset: true });
         }
     );
 /*Sessao cards */
+
