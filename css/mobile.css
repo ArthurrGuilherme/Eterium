@@ -69,8 +69,8 @@
         position: relative; /* Ajuste a camada do item ativo */
       }
       .cards03Mobile {
-        width: 330px;
-        height: 270px;
+        width: 300px;
+        height: 222px;
         background: var(--color-degrad01);
     }
     #cards04Mobile {
