@@ -18,6 +18,7 @@
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
             <script src="https://unpkg.com/scrollreveal"></script>
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <!--Css Api-->
     <!--Css-->
 </head>
@@ -481,22 +482,32 @@
                             <br>
                         </div>
                         <div class="forms text-light">
-                            <form action="#" method="post">
-                                <input type="text" id="nome" name="nome" placeholder="Digite Seu Nome Completo" required>
-                                <input type="email" id="email" placeholder="Digite E-mail" name="email" required>
-                                <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" maxlength="15" required>
-                                <select aria-label="Produtos" id="opcoes" name="opcoes" required>
-                                  <option value="" disabled selected>O que você procura ?</option>
-                                  <option value="opcao1">E-commerce</option>
-                                  <option value="opcao2">Sistemas customizados</option>
-                                  <option value="opcao3">Landing pages</option>
-                                  <option value="opcao4">Planilhas interativas </option>
-                                  <option value="opcao5">Desgnir ux/ui</option>
-                                  <option value="opcao5">Sites Completos</option>
-                                  <option value="opcao5">Mais informações</option>
+                            <form 
+                                action="https://sheetdb.io/api/v1/9joi48ww3dj40" 
+                                method="post"
+                                name="CRM"
+                                id="crmForm"
+                                >
+                                
+                                <input type="text" id="nome" name="data[nome]" placeholder="Digite Seu Nome Completo" required>
+
+                                <input type="email" id="email" name="data[email]" placeholder="Digite seu E-mail" required>
+
+                                <input type="tel" id="telefone" name="data[telefone]" placeholder="(XX) XXXXX-XXXX" maxlength="15" required oninput="formatarTelefone(this)">
+
+                                <select aria-label="Produtos" id="opcoes" name="data[produtos]" required>
+                                    <option value="" disabled selected>O que você procura?</option>
+                                    <option value="ecommerce">E-commerce</option>
+                                    <option value="sistemas">Sistemas customizados</option>
+                                    <option value="landing_pages">Landing pages</option>
+                                    <option value="planilhas">Planilhas interativas</option>
+                                    <option value="ux_ui">Designer UX/UI</option>
+                                    <option value="sites">Sites completos</option>
+                                    <option value="mais_info">Mais informações</option>
                                 </select>
+
                                 <button class="w-100" type="submit">Enviar</button>
-                              </form>
+                            </form>
                         </div>
                     </article>
                 </section>              
@@ -523,22 +534,31 @@
                             </div>
                             <br>
                             <div class="forms text-light">
-                                <form style="width: 300px;" action="#" method="post">
-                                    <input type="text" id="nome" name="nome" placeholder="Digite Seu Nome Completo" required>
-                                    <input type="email" id="email" placeholder="Digite E-mail" name="email" required>
-                                    <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" maxlength="15" required>
-                                    <select aria-label="Produtos" id="opcoes" name="opcoes" required>
-                                    <option value="" disabled selected>O que você procura ?</option>
-                                    <option value="opcao1">E-commerce</option>
-                                    <option value="opcao2">Sistemas customizados</option>
-                                    <option value="opcao3">Landing pages</option>
-                                    <option value="opcao4">Planilhas interativas </option>
-                                    <option value="opcao5">Desgnir ux/ui</option>
-                                    <option value="opcao5">Sites Completos</option>
-                                    <option value="opcao5">Mais informações</option>
-                                    </select>
-                                    <br>
-                                    <button class="w-100" type="submit">Enviar</button>
+                                <form style="width: 300px;"
+                                action="https://sheetdb.io/api/v1/9joi48ww3dj40" 
+                                method="post"
+                                name="CRM"
+                                id="crmForm01"
+                                >
+                                <input type="text" id="nome" name="data[nome]" placeholder="Digite Seu Nome Completo" required>
+
+                                <input type="email" id="email" name="data[email]" placeholder="Digite seu E-mail" required>
+
+                                <input type="tel" id="telefone" name="data[telefone]" placeholder="(XX) XXXXX-XXXX" maxlength="15" required oninput="formatarTelefone(this)">
+
+                                <select aria-label="Produtos" id="opcoes" name="data[produtos]" required>
+                                    <option value="" disabled selected>O que você procura?</option>
+                                    <option value="ecommerce">E-commerce</option>
+                                    <option value="sistemas">Sistemas customizados</option>
+                                    <option value="landing_pages">Landing pages</option>
+                                    <option value="planilhas">Planilhas interativas</option>
+                                    <option value="ux_ui">Designer UX/UI</option>
+                                    <option value="sites">Sites completos</option>
+                                    <option value="mais_info">Mais informações</option>
+                                </select>
+                                <br>
+                                <button class="w-100" type="submit">Enviar</button>
+                            </form>
                                 </form>
                             </div>
                         </div>
@@ -587,19 +607,72 @@
     </body>
     <!--js-->
         <script>
-        document.getElementById('telefone').addEventListener('input', function (e) {
-          let value = e.target.value.replace(/\D/g, ''); // Remove todos os caracteres não numéricos
-          
-          if (value.length > 2) {
-            value = '(' + value.substring(0, 2) + ') ' + value.substring(2);
-          }
-          if (value.length > 10) {
-            value = value.substring(0, 10) + '-' + value.substring(10, 15);
-          }
-    
-          e.target.value = value.substring(0, 15); // Mantém o valor no máximo em 15 caracteres
-        });
+        function formatarTelefone(input) {
+    let telefone = input.value.replace(/\D/g, '');
+    if (telefone.length > 10) {
+        input.value = telefone.replace(/^(\d{2})(\d{5})(\d{4})$/, "($1) $2-$3");
+    } else {
+        input.value = telefone.replace(/^(\d{2})(\d{4})(\d{0,4})$/, "($1) $2-$3");
+    }
+}
       </script>
+      <script>
+            document.getElementById("crmForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Evita o envio padrão do formulário
+
+            let formData = new FormData(this);
+
+            fetch("https://sheetdb.io/api/v1/9joi48ww3dj40", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.created) {
+                    Swal.fire({
+                        title: "Sucesso!",
+                        text: "Dados enviados com sucesso!",
+                        icon: "success",
+                    }).then(() => {
+                        location.reload(); // Recarrega a página para limpar o formulário
+                    });
+                } else {
+                    Swal.fire("Erro!", "Houve um problema ao enviar os dados.", "error");
+                }
+            })
+            .catch(error => {
+                Swal.fire("Erro!", "Não foi possível conectar ao servidor.", "error");
+            });
+            });
+
+            document.getElementById("crmForm01").addEventListener("submit", function(event) {
+            event.preventDefault(); // Evita o envio padrão do formulário
+
+            let formData = new FormData(this);
+
+            fetch("https://sheetdb.io/api/v1/9joi48ww3dj40", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.created) {
+                    Swal.fire({
+                        title: "Sucesso!",
+                        text: "Dados enviados com sucesso!",
+                        icon: "success",
+                    }).then(() => {
+                        location.reload(); // Recarrega a página para limpar o formulário
+                    });
+                } else {
+                    Swal.fire("Erro!", "Houve um problema ao enviar os dados.", "error");
+                }
+            })
+            .catch(error => {
+                Swal.fire("Erro!", "Não foi possível conectar ao servidor.", "error");
+            });
+            });
+        </script>
         <script src="./js/maps.js"></script>
         <script src="./js/scroll.js"></script>
         <script src="./js/scrollrevel.js"></script>
